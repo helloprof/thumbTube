@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
-        <title>ThumbTube</title>
-    </head>
-
-    <body>
-        
-        <h1>THUMB TUBE</h1>
-        <audio controls>
-            <source src="/data/audio.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0FIDCNYYjNvPVimz5icugS?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <a href="/about">About!</a>
-        <p>thumb <b>tube</b> for ai generated </p>
-        <div style="text-align: center; border: 2px black solid;">
-        <img width="30%" src="https://yt3.googleusercontent.com/nxYrc_1_2f77DoBadyxMTmv7ZpRZapHR5jbuYe7PlPd5cIRJxtNNEYyOC0ZsxaDyJJzXrnJiuDE=s160-c-k-c0x00ffffff-no-rj">
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Henny+Penny&display=swap" rel="stylesheet"> -->
+    <script src="https://kit.fontawesome.com/efeb3f9255.js" crossorigin="anonymous"></script>
+    <title>ThumbTube</title>
+</head>
+<body>
+    <div id="navbar">
+        <h1>Thumb<span style="background-color: crimson; color: white; border-radius: 20%; padding: 2px; margin: 1px;">Tube</span></h1>
+        <div id="search">
+            <input type="text" placeholder="Search">
+            <button class="nav-button"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
-    </body>
+        <div>
+            <button class="nav-button"><i class="fa-solid fa-right-to-bracket"></i></button>
+            <button class="nav-button"><i class="fa-solid fa-user-plus"></i></button>
+        </div>
+    </div>
+
+    <div id="page">
+        <div class="side-menu">
+            side menu
+        </div>
+    
+        <div class="main">
+            <div>main page</div>
+            <!-- <table>
+
+            </table> -->
+        </div>
+    </div>
+    <script src="/data/videos.js"></script>
+    <script src="/data/channels.js"></script>
+    <script src="/js/app.js"></script>
+
+</body>
 </html>
