@@ -5,7 +5,7 @@ window.videos = [
     // description: '',
     // tags: [],
     videoURL: 'https://www.youtube.com/watch?v=A-vX1AGBGsc&themeRefresh=1',
-    thumbnailURL: null,
+    thumbnailURL: '/images/firstgrade.png',
     channelID: 1,
     views: 100000000,
     datePublished: 'Jan 31, 2019'
@@ -16,7 +16,7 @@ window.videos = [
     // description: '',
     // tags: [],
     videoURL: 'https://www.youtube.com/watch?v=Y9cS08Arymw',
-    thumbnailURL: null,
+    thumbnailURL: '/images/daily.png',
     channelID: 2,
     views: 1600000,
     datePublished: 'Jan 30, 2025'  },
@@ -26,7 +26,7 @@ window.videos = [
     // description: '',
     // tags: [],
     videoURL: 'https://www.youtube.com/watch?v=kqtD5dpn9C8&pp=ygULbW9zaCBweXRob24%3D',
-    thumbnailURL: null,
+    thumbnailURL: '/images/python.png',
     channelID: 3,
     views: 20000000,
     datePublished: 'January 2021'  
@@ -37,7 +37,7 @@ window.videos = [
     // description: '',
     // tags: [],
     videoURL: 'https://www.youtube.com/watch?v=zajUgQLviwk',
-    thumbnailURL: null,
+    thumbnailURL: '/images/lastone.png',
     channelID: 1,
     views: 123121230,
     datePublished: 'March 2025'  
@@ -48,7 +48,7 @@ window.videos = [
     // description: '',
     // tags: [],
     videoURL: 'https://www.youtube.com/watch?v=zajUgQLviwk',
-    thumbnailURL: null,
+    thumbnailURL: '/images/lastone.png',
     channelID: 1,
     views: 123121230,
     datePublished: 'March 2025'  
@@ -59,7 +59,7 @@ window.videos = [
     // description: '',
     // tags: [],
     videoURL: 'https://www.youtube.com/watch?v=zajUgQLviwk',
-    thumbnailURL: null,
+    thumbnailURL: '/images/lastone.png',
     channelID: 1,
     views: 123121230,
     datePublished: 'March 2025'  
@@ -70,7 +70,7 @@ window.videos = [
     // description: '',
     // tags: [],
     videoURL: 'https://www.youtube.com/watch?v=zajUgQLviwk',
-    thumbnailURL: null,
+    thumbnailURL: '/images/lastone.png',
     channelID: 1,
     views: 123121230,
     datePublished: 'March 2025'  
