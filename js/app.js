@@ -23,10 +23,13 @@ function generateVideos(channelID) {
         videoImage.src = video.thumbnailURL
         // videoImage.className = "video-thumbnail"
 
-        videoCard.className = "video-card"
         videoCard.appendChild(videoImage)
         videoCard.appendChild(videoTitle)
         // videoCard.appendChild(videoDescription)
+        videoCard.className = "video-card"
+        videoCard.addEventListener("click", () => {
+            window.open(video.videoURL, '_blank').focus();
+        })
 
         videoList.appendChild(videoCard)
     })
