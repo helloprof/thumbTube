@@ -54,7 +54,45 @@
         </div>
     
         <div class="main">
-            <div id="main-page">main page</div>
+            <div id="main-page">
+                <form method="POST" class="chatForm">
+                <!-- <form method="POST"  action="https://httpbin.org/post"> -->
+                    <input type="text" placeholder="Enter thumbnail description here" name="prompt" class="chatInput">
+                    <button type="submit" class="nav-button"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+                <script>
+                    let chatForm = document.querySelector('.chatForm');
+                    chatForm.onsubmit = function() {
+                        event.preventDefault();
+                        let chatInput = document.querySelector('.chatInput');
+                        let prompt = chatInput.value;
+                        // console.log(prompt);
+
+                        let chatData = {
+                            prompt: `Mr beast style thumbnail overexaggerated for ${prompt}`,
+                            model: 'dall-e-3'
+                        }
+
+                        fetch('https://api.openai.com/v1/images/generations', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type':'application/json',
+                                'Authorization': 'Bearer OPENAI_API_KEY HERE ' // add your openai key here
+                            },
+                            body: JSON.stringify(chatData),
+                        }).then(response => response.json())
+                        .then(data => {
+                            console.log(data.data[0].url);
+                            let generatedImg = document.createElement('img');
+                            generatedImg.src = data.data[0].url;
+                            let mainPage = document.querySelector('#main-page');
+                            mainPage.appendChild(generatedImg);
+                        })
+
+                    }
+
+                </script>
+            </div>
             <!-- <table>
 
             </table> -->

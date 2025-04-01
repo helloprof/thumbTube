@@ -27,9 +27,44 @@ function generateVideos(channelID) {
         videoCard.appendChild(videoTitle)
         // videoCard.appendChild(videoDescription)
         videoCard.className = "video-card"
+
+        // check for 1 click
         videoCard.addEventListener("click", () => {
-            window.open(video.videoURL, '_blank').focus();
+            // window.open(video.videoURL, '_blank').focus();
+            console.log(video.videoURL)
+            // let chatPrompt = document.createElement("input")
+            // chatPrompt.type = "text"
+            // chatPrompt.placeholder = "Enter your thumbnail description here"
+            // let chatButton = document.createElement("button")
+            // chatButton.innerText = "Submit"
+            // videoCard.appendChild(chatPrompt)
+            // videoCard.appendChild(chatButton)
+
+            let chatData = {
+                prompt: `Mr Beast Youtube style thumbnail overexaggerated for video titled: "${video.title}"`,
+                model: 'dall-e-3'
+            }
+
+            fetch('https://api.openai.com/v1/images/generations', {
+                method: 'POST',
+                headers: {
+                    'Content-Type':'application/json',
+                    'Authorization': 'Bearer OPENAI_API_KEY HERE ' // add your openai key here
+                },
+                body: JSON.stringify(chatData),
+            }).then(response => response.json())
+            .then(data => {
+                console.log(data.data[0].url);
+                videoImage.src = data.data[0].url;
+                // let generatedImg = document.createElement('img');
+                // generatedImg.src = data.data[0].url;
+                // let mainPage = document.querySelector('#main-page');
+                // mainPage.appendChild(generatedImg);
+            })
+
+                    
         })
+
 
         videoList.appendChild(videoCard)
     })
